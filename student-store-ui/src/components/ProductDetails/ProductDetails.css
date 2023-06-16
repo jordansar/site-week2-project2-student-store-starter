@@ -1,0 +1,16 @@
+
+
+
+.product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    /* justify-content: center; */
+}
+
+
+.product-image{
+    justify-content: center;
+    /* margin-right: 60px; */
+}
