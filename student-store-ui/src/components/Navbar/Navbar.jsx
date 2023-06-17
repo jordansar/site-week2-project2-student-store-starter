@@ -20,10 +20,10 @@ export default function Navbar() {
 
 
       <ul className="links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/#About">About</a></li>
-        <li><a href="/#Contact">Contact Us</a></li>
-        <li><a href="/#Buy">Buy Now</a></li>
+        <li><a href="/" style={{scrollBehavior: "smooth"}}>Home</a></li>
+        <li><a href="/#About"  style={{scrollBehavior: "smooth"}}>About</a></li>
+        <li><a href="/#Contact" style={{scrollBehavior: "smooth"}}>Contact Us</a></li>
+        <li><a href="/#Buy" style={{scrollBehavior: "smooth"}}>Buy Now</a></li>
       </ul>
     </div>
   </nav>

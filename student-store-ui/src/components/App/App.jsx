@@ -52,17 +52,9 @@ const [products, setProducts] = useState();
 
 
           <Routes>
-            {/* <Route path="/" element={ <Navbar/>}/> */}
-            {/* <Route path="/" element={ <SubNavBar/>}/> */}
-              <Route path="/" element={ <Home products={products}/>}/>
+            <Route path="/" element={ <Home products={products}/>}/>
 
             <Route path="products/:id" element ={<ProdcutDetails/>}/>
-
-
-            {/* <Route path="/about" element={<About/>}/> */}
-            {/* <Route path="/Buy" element={<Home products={products}/>}/> */}
-            {/* <Route path="*" element={<p></p>}/> */}
-            {/* <Route path="/Buy" element={ <Home products={products} /> }/> */}
           </Routes>
 
         </main>

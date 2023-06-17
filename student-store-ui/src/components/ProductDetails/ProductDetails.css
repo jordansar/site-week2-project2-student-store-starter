@@ -9,8 +9,10 @@
     /* justify-content: center; */
 }
 
+.product-container img {
+    border-radius: 30px;
+}
 
-.product-image{
-    justify-content: center;
-    /* margin-right: 60px; */
+.product-container p {
+margin-top: 5%;
 }

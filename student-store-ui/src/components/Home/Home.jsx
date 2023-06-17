@@ -56,12 +56,10 @@ export default function Home({products}) {
               <div className="main-info">
               <p className="product-name"> {info.name}</p>
               <div className="stars">
-                 {/* <img src="https://assets.stickpng.com/images/580b585b2edbce24c47b2915.png" alt="stars" style={{width: "20px", height: "20px" }}/>
-                 <img src="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2915.png" alt="stars" style={{width: "20px", height: "20px" }}/>
-                 <img src="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2915.png" alt="stars" style={{width: "20px", height: "20px" }}/>
-                 <img src="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2915.png" alt="stars" style={{width: "20px", height: "20px" }}/>
-                 <img src="https://assets.stickpng.com/images/58443d75a6515b1e0ad75b7e.png" alt="stars" style={{width: "20px", height: "20px" }}/> */}
-                 {/* <img src="	https://assets.stickpng.com/thumbs/58443d75a6515b1e0ad75b7e.png" alt="stars" style={{width: "20px", height: "20px" }}/> */}
+                 <img src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46nPvachKnCXtBEgQdNZ0c7125u9qqBormQ&usqp=CAU" alt="stars" style={{width: "20px", height: "20px" }}/>
+                 <img src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46nPvachKnCXtBEgQdNZ0c7125u9qqBormQ&usqp=CAU" alt="stars" style={{width: "20px", height: "20px" }}/>
+                 <img src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46nPvachKnCXtBEgQdNZ0c7125u9qqBormQ&usqp=CAU" alt="stars" style={{width: "20px", height: "20px" }}/>
+                 <img src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46nPvachKnCXtBEgQdNZ0c7125u9qqBormQ&usqp=CAU" alt="stars" style={{width: "20px", height: "20px" }}/>
               </div>
               <p className="product-price">{info.price.toFixed(2)}</p>
               </div>

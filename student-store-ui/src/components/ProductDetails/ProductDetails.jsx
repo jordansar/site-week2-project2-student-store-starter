@@ -29,10 +29,7 @@ import Navbar from "../Navbar/Navbar";
         <>
         <div className="product-detail" key={param.id}>
             <div className="product-container">
-            <div className="product-image">
-            <img src={product?.image} alt="" style={{width: "50%"}} />
-            </div>
-
+            <img src={product?.image} alt="" style={{width: "550px", height: "550px" }} />
             <p>{product?.description}</p>
             </div>
         </div>
