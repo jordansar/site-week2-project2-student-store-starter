@@ -27,7 +27,6 @@ import Navbar from "../Navbar/Navbar";
 
     return(
         <>
-        <Navbar/>
         <div className="product-detail" key={param.id}>
             <div className="product-container">
             <div className="product-image">

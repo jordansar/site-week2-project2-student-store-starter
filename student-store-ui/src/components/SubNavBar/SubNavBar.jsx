@@ -2,7 +2,7 @@ import * as React from "react"
 import "./SubNavBar.css"
 import { useState } from "react"
 
-export default function SubNavBar({products, setQuery, setCategory, query}) {
+export default function SubNavBar({products, setQuery, setCategory, query,category }) {
 
 
 
@@ -42,20 +42,20 @@ export default function SubNavBar({products, setQuery, setCategory, query}) {
         </div>
         
         <ul className="category-menu open">
-          <li className="is-active">
-            <button onClick={ () => setCategory("all categories")}>All Categories</button>
+          <li className= {category === 'all categories' ? 'is-active' : "" }>
+            <button onClick={ () => setCategory("all categories")  }>All Categories</button>
           </li>
-          <li className="">
-            <button onClick={ () => setCategory("clothing")} >Clothing</button>
+          <li className= {category === 'clothing' ? 'is-active' : "" }>
+            <button onClick={  () => setCategory("clothing")} >Clothing</button>
           </li>
-          <li className="">
+          <li className= {category === 'food' ? 'is-active' : "" }>
             <button onClick={ () => setCategory("food")} >Food</button>
           </li>
-          <li className="">
+          <li className= {category === 'accessories' ? 'is-active' : "" }>
             <button onClick={ () => setCategory("accessories")} >Accessories</button>
           </li>
-          <li className="">
-            <button onClick={() => setCategory("tech")} >Tech</button>
+          <li className= {category === 'tech' ? 'is-active' : "" }>
+            <button  onClick={() => setCategory("tech")} >Tech</button>
           </li>
         </ul>
 

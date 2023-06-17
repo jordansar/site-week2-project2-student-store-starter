@@ -45,6 +45,7 @@ const [products, setProducts] = useState();
 
 
           <Navbar/>
+          <Sidebar/>
 
 
 
