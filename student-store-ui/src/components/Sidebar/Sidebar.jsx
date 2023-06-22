@@ -1,19 +1,27 @@
 import * as React from "react"
 import "./Sidebar.css"
+import { useState } from "react"
+import ShoppingCart from "../ShoppingCart/ShoppingCart"
 
-export default function Sidebar() {
+
+export default function Sidebar({shoppingList, setShoppingList}) {
+// console.log(shoppingList)
+  const [isActive, setIsActive] = useState(null)
+
   return (
     
-    // <section className="sidebar">
-    <>  
-      <section className="sidebar closed">
+    <>
+
+{ !isActive ? (
+
+    <section className="sidebar closed">
         <div className="wrapper">
-          <button className="toggle-button button closed">
+          <button  onClick={()=>{setIsActive(!isActive)}} className="toggle-button button closed">
             <i className="material-icons md-48">arrow_forward</i>
           </button>
 
         <div className="shopping-cart">
-              <div className="cart-icons">
+              <div onClick={()=>{setIsActive(!isActive)}} className="cart-icons">
                 <span className="cart-icon icon button">
                   <i className="material-icons md-48">add_shopping_cart</i>
                 </span>
@@ -28,37 +36,42 @@ export default function Sidebar() {
         </div>
       </section>
 
-
-
-{/* <section className="sidebar open">
+  ) : (
+  <section className="sidebar open">
   <div className="wrapper">
-    <button className="toggle-button button open">
-      <i className="material-icons md-48">arrow_forward</i>
-    </button>
-      <div className="shopping-cart">
-        <div className="open">
-          <h3 className="">Shopping Cart 
+  <button onClick={()=>{setIsActive(!isActive)}} className="toggle-button button open">
+    <i className="material-icons md-48">arrow_forward</i>
+  </button>
+    <div className="shopping-cart">
+      <div className="open">
+        <h3 className="">Shopping Cart 
+        <span className="button">
+          <i className="material-icons md-48">add_shopping_cart</i>
+        </span>
+      </h3>
+
+      {/* <div className="notification">No items added to cart yet. Start shopping now!</div> */}
+{/* {console.log(shoppingList)} */}
+      <ShoppingCart shoppingList={shoppingList} setShoppingList={setShoppingList} />
+      <div className="checkout-form">
+        <h3 className="">Payment Info
           <span className="button">
-            <i className="material-icons md-48">add_shopping_cart</i>
+            <i className="material-icons md-48">monetization_on</i>
           </span>
         </h3>
-      <div className="notification">No items added to cart yet. Start shopping now!</div>
-      <div className="checkout-form">
-        <h3 className="">Payment Info 
-        <span className="button">
-          <i className="material-icons md-48">monetization_on</i>
-          </span>
-          </h3>
+
       <div className="input-field">
         <label className="label">Name</label>
         <div className="control ">
-          <input name="name" className="checkout-form-input" type="text" placeholder="Student Name" value=""/>
-        </div>
+        <input name="name" className="checkout-form-input" type="text" placeholder="Student Name" />
+      </div>
+
+
       </div>
     <div className="input-field">
   <label className="label">Email</label>
   <div className="control">
-    <input name="email" className="checkout-form-input" type="email" placeholder="student@codepath.org" value=""/>
+    <input name="email" className="checkout-form-input" type="email" placeholder="student@codepath.org"/>
     </div>
   </div>
 
@@ -96,15 +109,9 @@ export default function Sidebar() {
   </div>
   </div>
   </div>
-</section> */}
-
+</section> )
+}
 
 </>
-
-
-
-
-
-    // </section>
   )
 }

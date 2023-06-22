@@ -8,11 +8,36 @@ import Navbar from "../Navbar/Navbar";
 
 
 
- export default function ProdcutDetails () {
+ export default function ProdcutDetails ({shoppingList ,setShoppingList}) {
 
 
     const param = useParams()
     const [product, setProduct] = useState({})
+
+
+
+
+    function handleSubtracting (product) {
+        let ifInCart = shoppingList?.find(item => item.id === product.id)
+
+        if(ifInCart) 
+        {
+            let updateList = shoppingList?.map((item) => {
+              if(item.id === product.id)  {
+                  if (item.quantity > 0){
+                    return {...item, quantity: item.quantity - 1}
+                  }
+                }
+                return item
+        
+            })
+            updateList = updateList.filter(item => item.quantity > 0)
+            setShoppingList(updateList)
+        }
+        // console.log(updateList)
+    }
+
+    
 
 
         // console.log(descriptions)

@@ -16,8 +16,11 @@ import ProdcutDetails from "../ProductDetails/ProductDetails";
 export default function App() {
 
   const url = "https://codepath-store-api.herokuapp.com/store";
+  // const url = "http://localhost:3000/";
 
 const [products, setProducts] = useState();
+const [shoppingList, setShoppingList] = useState([])
+
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -35,26 +38,14 @@ const [products, setProducts] = useState();
       <BrowserRouter>
 
         <main>
-          {/* <Navbar /> */}
-          {/* <Sidebar /> */}
-          {/* <Hero/> */}
-          {/* <SubNavBar/> */}
-          {/* <Home products={products}/> */}
-
-
-
-
           <Navbar/>
-          <Sidebar/>
-
-
-
+          <Sidebar shoppingList={shoppingList} setShoppingList={setShoppingList}  />
 
 
           <Routes>
-            <Route path="/" element={ <Home products={products}/>}/>
-
-            <Route path="products/:id" element ={<ProdcutDetails/>}/>
+            <Route path="/" element={ <Home products={products} shoppingList={shoppingList} setShoppingList={setShoppingList} />}/>
+{/* {console.log(shoppingList)} */}
+            <Route path="products/:id" element ={<ProdcutDetails shoppingList={shoppingList} setShoppingList= {setShoppingList} />}/>
           </Routes>
 
         </main>
