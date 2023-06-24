@@ -15,11 +15,14 @@ import ProdcutDetails from "../ProductDetails/ProductDetails";
 
 export default function App() {
 
-  const url = "https://codepath-store-api.herokuapp.com/store";
-  // const url = "http://localhost:3000/";
+  // const url = "https://codepath-store-api.herokuapp.com/store";
+
+
+  const url = "http://localhost:3001/";
 
 const [products, setProducts] = useState();
 const [shoppingList, setShoppingList] = useState([])
+const [receiptText, setReceiptText] = useState("")
 
 
   useEffect(() => {
@@ -39,7 +42,7 @@ const [shoppingList, setShoppingList] = useState([])
 
         <main>
           <Navbar/>
-          <Sidebar shoppingList={shoppingList} setShoppingList={setShoppingList}  />
+          <Sidebar shoppingList={shoppingList} setShoppingList={setShoppingList} receiptText={receiptText} setReceiptText={receiptText}  />
 
 
           <Routes>
@@ -55,5 +58,6 @@ const [shoppingList, setShoppingList] = useState([])
 
   );
 }
+
 
 

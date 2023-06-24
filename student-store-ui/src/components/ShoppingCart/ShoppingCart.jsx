@@ -9,7 +9,6 @@ export default function shoppingCart ({shoppingList, setShoppingList}) {
 
 
     const [subTotal, setSubTotal] = useState(0);
-    let S
 
 
     useEffect (() => {
@@ -37,7 +36,7 @@ export default function shoppingCart ({shoppingList, setShoppingList}) {
                 
 
                 {shoppingList?.length === 0 ? (
-                    <div> No items in the list</div>
+                    <div>Nothing was added</div>
                 ): (
                     <div>{shoppingList.map((item) => (
                         <div className="product-row">

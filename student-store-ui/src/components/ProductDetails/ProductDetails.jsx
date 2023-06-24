@@ -34,17 +34,16 @@ import Navbar from "../Navbar/Navbar";
             updateList = updateList.filter(item => item.quantity > 0)
             setShoppingList(updateList)
         }
-        // console.log(updateList)
     }
+
+    const url = "http://localhost:3001/";
 
     
 
-
-        // console.log(descriptions)
-
     useEffect( () => {
-         axios.get(`https://codepath-store-api.herokuapp.com/store/${param.id}`).then(response => {
-            setProduct(response.data.product)
+         axios.get(`${url}${param.id}`).then(response => {
+            setProduct(response.data)
+            // console.log(response.data)
         })
         }
          ,[])

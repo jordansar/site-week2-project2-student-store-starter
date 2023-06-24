@@ -16,7 +16,7 @@ export default function Home({products, shoppingList, setShoppingList }) {
   const [query, setQuery] = useState("")
   const [category, setCategory] = useState("")
 
-  // const [qunatity, setQuantity] = useState(0)
+
 
 
 

@@ -23,17 +23,15 @@ export default function ProductGrid({products, filterProducts, shoppingList, set
                return item
             })
             setShoppingList(updatedList)
-            // console.log(shoppingList)
-
-        //    let updatedCart =  shoppingList.find(item.id === product.id)
+            
         } else {
             setShoppingList([...shoppingList, {...product, quantity: 1}])
 
-            // console.log(shoppingList)
+            
         }
 
     }
-    // console.log("remove item from cart")
+    
 
 
     function handleSubtracting (product) {
